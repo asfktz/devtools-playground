@@ -1,8 +1,8 @@
 const { join } = require('path');
 const pkgDir = require('pkg-dir');
 const minimist = require('minimist');
-
-const first = arr => arr[0];
+const get = require('lodash/get');
+const first = require('lodash/first');
 
 const parseArgs = processArgs => {
   const args = minimist(processArgs.slice(2));
@@ -14,19 +14,23 @@ const parseArgs = processArgs => {
 };
 
 const resolveEntry = (dir, entry) => {
-  if (entry) {
-    return join(dir, entry);
-  }
+  if (entry) return entry; 
 
-  const pkg = require(join(dir, './package.json'));
-  return join(dir, pkg.main);
+  // If no entry specified, take the main entry from package.json
+  // if there's no package.json,either, take './index.js'
+  try {
+    const pkg = require(join(dir, './package.json'));
+    return get(pkg, 'main');
+  } catch (err) {
+    return './index.js';
+  }
 };
 
 module.exports = function(processArgs) {
   const args = parseArgs(processArgs);
-  const dir = pkgDir.sync();
-  const entry = resolveEntry(dir, args.entry);
+  const dir = pkgDir.sync() || process.cwd();
+  const entry = join(dir, resolveEntry(dir, args.entry));
   const { esm } = args;
-  
+
   return { entry, dir, esm };
 };

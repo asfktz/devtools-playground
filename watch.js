@@ -1,6 +1,6 @@
 const chokidar = require('chokidar');
 const path = require('path');
-const debounce = require('lodash.debounce');
+const debounce = require('lodash/debounce');
 
 module.exports = (dir, callback) => {
   const watcher = chokidar
