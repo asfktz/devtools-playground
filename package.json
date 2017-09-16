@@ -1,6 +1,6 @@
 {
   "name": "@asfktz/hack",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
