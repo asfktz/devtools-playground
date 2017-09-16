@@ -1,0 +1,30 @@
+{
+  "name": "@asfktz/hack",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "bin": {
+    "hack": "./cli.js"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "pkg-dir": "^2.0.0"
+  },
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "lodash.debounce": "^4.0.8"
+  }
+}
