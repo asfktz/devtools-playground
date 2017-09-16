@@ -2,18 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Devtools</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <script>
+      [
+        { type: 'Node', version: process.versions.node },
+        { type: 'Chromium', version: process.versions.chrome },
+        { type: 'Electron', version: process.versions.electron }
+      ].forEach(({ type, version }) => {
+        document.write(`<p>${type}: ${version}</p>`);
+      });
+    </script>
   </body>
 
   <script>
-    // You can also require other files to run in this process
-    require('./renderer.js');
+    const { remote } = require('electron');
+    const { entry } = remote.getGlobal('client');
+    
+    require(entry);
   </script>
 </html>

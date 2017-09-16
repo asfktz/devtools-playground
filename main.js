@@ -7,9 +7,22 @@ const BrowserWindow = electron.BrowserWindow;
 const path = require('path');
 const url = require('url');
 
+const watch = require('./watch');
+
+const Client = require('./Client');
+
+const client = Client.create({
+  entry: process.argv[2]
+});
+
+// expose client information to renderer process 
+global.client = client;
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+
+const quit = app.quit.bind(app);
 
 function createWindow() {
   // Create the browser window.
@@ -27,12 +40,22 @@ function createWindow() {
   // Open the DevTools.
   mainWindow.webContents.openDevTools({ mode: 'detach' });
 
+  // kill the process when devtools is closed
+  mainWindow.webContents.on('devtools-closed', quit);
+
+  // live-reload devtools
+  // watch for changes in the user's project
+  const unwatch = watch(client.dir, () => {
+    mainWindow.reload();
+  });
+
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null;
+    unwatch();
   });
 }
 
@@ -42,13 +65,7 @@ function createWindow() {
 app.on('ready', createWindow);
 
 // Quit when all windows are closed.
-app.on('window-all-closed', function() {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
+app.on('window-all-closed', quit);
 
 app.on('activate', function() {
   // On OS X it's common to re-create a window in the app when the
@@ -57,6 +74,3 @@ app.on('activate', function() {
     createWindow();
   }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.

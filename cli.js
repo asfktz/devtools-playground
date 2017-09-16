@@ -4,4 +4,5 @@ const electron = require('electron');
 const proc = require('child_process');
 
 // spawn Electron
-const child = proc.spawn(electron, [__dirname]);
+const entry = process.argv[2] || '';
+proc.spawn(electron, [__dirname, entry], { stdio: 'inherit' });
