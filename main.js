@@ -1,6 +1,7 @@
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;
+
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
@@ -9,14 +10,12 @@ const url = require('url');
 
 const watch = require('./watch');
 
-const Client = require('./Client');
+const createSettings = require('./createSettings');
 
-const client = Client.create({
-  entry: process.argv[2]
-});
+const settings = createSettings(process.argv);
 
-// expose client information to renderer process 
-global.client = client;
+// expose settings to renderer process 
+global.settings = settings;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -45,7 +44,7 @@ function createWindow() {
 
   // live-reload devtools
   // watch for changes in the user's project
-  const unwatch = watch(client.dir, () => {
+  const unwatch = watch(settings.dir, () => {
     mainWindow.reload();
   });
 

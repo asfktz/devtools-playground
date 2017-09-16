@@ -17,9 +17,6 @@
   </body>
 
   <script>
-    const { remote } = require('electron');
-    const { entry } = remote.getGlobal('client');
-    
-    require(entry);
+    require('./renderer');
   </script>
 </html>
