@@ -1,24 +1,23 @@
 {
-  "name": "@asfktz/hack",
-  "version": "0.0.4",
-  "description": "A minimal Electron application",
+  "name": "alive-cli",
+  "version": "0.0.1",
+  "description": "live-reload devtools inspector",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "bin": {
-    "hack": "./cli.js"
+    "alive": "./cli.js"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/asfktz/alive-cli",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "devtools",
+    "inspect",
+    "debugging",
+    "live-reload"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Asaf Katz",
+  "license": "MIT",
   "dependencies": {
     "@std/esm": "^0.9.2",
     "chokidar": "^1.7.0",
