@@ -24,8 +24,8 @@ To open an independent devtools window.
 It will reload automatically on every file change.
 
 ### ES Modules
-By default, you can use commonJS style modules
-But you can also enable support for ES module too:
+By default, it uses commonJS modules.
+But you can enable support for ES module too:
 
 ```
 hack ./file.js --esm
