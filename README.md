@@ -1,12 +1,13 @@
+# hack-cli
 Independent Devtools for prototyping & debugging.
 
-Built on top of electron.
+<img src="./demo.gif" />
 
 # Features
-- Independent DevTools
+- Standalone DevTools
 - Live reloading
-- Support for ES modules (import / export)
-
+- Support for ES modules (import/export)
+- Built on top of electron, which means that both Node.js modules & The Browser's APIs are available
 
 # Install
 ```
@@ -20,7 +21,7 @@ run:
 hack ./file.js
 ```
 To open an independent devtools window.
-It will reload automatically when you make a change.
+It will reload automatically on every file change.
 
 ### ES Modules
 By default, you can use commonJS style modules
