@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "live-reload devtools inspector",
   "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
   "bin": {
     "alive": "./cli.js"
   },
