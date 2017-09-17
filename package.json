@@ -1,12 +1,12 @@
 {
-  "name": "alive-cli",
+  "name": "hack-cli",
   "version": "0.0.1",
   "description": "live-reload devtools inspector",
   "main": "main.js",
   "bin": {
-    "alive": "./cli.js"
+    "hack": "./cli.js"
   },
-  "repository": "https://github.com/asfktz/alive-cli",
+  "repository": "https://github.com/asfktz/hack-cli",
   "keywords": [
     "devtools",
     "inspect",
