@@ -1,6 +1,6 @@
 {
   "name": "hack-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "live-reload devtools inspector",
   "main": "main.js",
   "bin": {
