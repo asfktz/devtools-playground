@@ -7,7 +7,7 @@ Standalone Devtools for prototyping & debugging.
 - Standalone DevTools
 - Live reloading
 - Support for ES modules (import/export)
-- Built on top of electron, which means that both Node.js modules & The Browser's APIs are available
+- Built on top of electron, which means that both Node.js modules & the Browser's APIs are available
 
 # Install
 ```
