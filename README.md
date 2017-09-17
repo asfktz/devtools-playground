@@ -16,7 +16,7 @@ npm i -g hack-cli
 
 # Usage
 
-run: 
+Run: 
 ```
 hack ./file.js
 ```
