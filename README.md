@@ -1,5 +1,5 @@
 # hack-cli
-Independent Devtools for prototyping & debugging.
+Standalone Devtools for prototyping & debugging.
 
 <img src="./demo.gif" />
 
