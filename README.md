@@ -20,8 +20,7 @@ Run:
 ```
 hack ./file.js
 ```
-To open an independent devtools window.
-It will reload automatically on every file change.
+It'll open Devtools and reload automatically on every file change.
 
 ### ES Modules
 By default, it uses commonJS modules.
