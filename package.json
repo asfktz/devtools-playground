@@ -1,7 +1,7 @@
 {
   "name": "devtools-playground",
   "version": "0.0.3",
-  "description": "live-reload devtools inspector",
+  "description": "Standalone Devtools for prototyping & debugging.",
   "main": "main.js",
   "bin": {
     "hack": "./cli.js"
