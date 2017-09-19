@@ -1,5 +1,5 @@
 {
-  "name": "hack-cli",
+  "name": "devtools-playground",
   "version": "0.0.3",
   "description": "live-reload devtools inspector",
   "main": "main.js",
