@@ -1,4 +1,4 @@
-# hack-cli
+# devtools-playground
 Standalone Devtools for prototyping & debugging.
 
 <img src="./demo.gif" />
@@ -11,7 +11,7 @@ Standalone Devtools for prototyping & debugging.
 
 # Install
 ```
-npm i -g hack-cli
+npm i -g devtools-playground
 ```
 
 # Usage
@@ -27,7 +27,7 @@ By default, it uses commonJS modules.
 But you can enable support for ES module too:
 
 ```
-hack ./file.js --esm
+devtools ./file.js --esm
 ```
 
 It uses `@std/esm` under the hood
