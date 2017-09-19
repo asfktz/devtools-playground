@@ -18,7 +18,7 @@ npm i -g devtools-playground
 
 Run: 
 ```
-hack ./file.js
+devtools ./file.js
 ```
 It'll open Devtools and reload automatically on every file change.
 
