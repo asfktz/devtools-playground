@@ -1,6 +1,6 @@
 {
   "name": "devtools-playground",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Standalone Devtools for prototyping & debugging.",
   "main": "main.js",
   "bin": {
