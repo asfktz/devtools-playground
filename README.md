@@ -1,7 +1,7 @@
 # devtools-playground
 Standalone Devtools for prototyping & debugging.
 
-<img src="./demo.gif" />
+<img src="./animation.gif" />
 
 # Features
 - Standalone DevTools
