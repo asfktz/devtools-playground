@@ -1,12 +1,12 @@
 {
-  "name": "hack-cli",
-  "version": "0.0.4",
-  "description": "live-reload devtools inspector",
+  "name": "devtools-playground",
+  "version": "0.0.1",
+  "description": "Standalone Devtools for prototyping & debugging.",
   "main": "main.js",
   "bin": {
-    "hack": "./cli.js"
+    "devtools": "./cli.js"
   },
-  "repository": "https://github.com/asfktz/hack-cli",
+  "repository": "https://github.com/asfktz/devtools-playground",
   "keywords": [
     "devtools",
     "inspect",
