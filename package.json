@@ -18,7 +18,7 @@
   "dependencies": {
     "@std/esm": "^0.10.2",
     "chokidar": "^1.7.0",
-    "electron": "~1.6.2",
+    "electron": "~1.7.8",
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
     "pkg-dir": "^2.0.0"
