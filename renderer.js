@@ -1,5 +1,4 @@
 const { remote } = require('electron');
-
 // Get the settings exposed by the main process (see main.js).
 const { entry, esm } = remote.getGlobal('settings');
 
@@ -11,7 +10,8 @@ const getRequire = esm => {
   // With support for ES modules.
   return require('@std/esm')(module, {
     cjs: true,
-    esm: 'js'
+    esm: 'js',
+    sourceMap: true
   });
 };
 
